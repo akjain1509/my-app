@@ -7,6 +7,7 @@ import UserListScreen from '../screens/UserListScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import UserDetailsScreen from '../screens/UserDetailsScreen';
 import TokenScreen from '../screens/TokenScreen';
+import LargeListScreen from '../screens/LargeListScreen';
 // import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export type RootStackParamList = {
@@ -44,6 +45,7 @@ export default function RootNavigator() {
             }}
         >
             <Tab.Navigator screenOptions={{ headerShown: false }}>
+                <Tab.Screen name="LargeListScreen" component={LargeListScreen} options={{ title: 'Large List' }} />
                 <Tab.Screen name="Products" component={ProductListScreen} />
                 <Tab.Screen name="Cart" component={CartScreen} />
                 <Tab.Screen name="Users" component={UsersStack} />
@@ -53,34 +55,3 @@ export default function RootNavigator() {
     );
 }
 
-// const Tab = createBottomTabNavigator();
-
-// export default function RootNavigator() {
-//     return (
-//         <NavigationContainer>
-//             <Tab.Navigator
-//                 screenOptions={({ route }) => ({
-//                     // tabBarIcon: ({ focused, color, size }) => {
-//                     //     let iconName;
-
-//                     //     if (route.name === 'Products') {
-//                     //         iconName = focused ? 'home' : 'home-outline';
-//                     //     } else if (route.name === 'Cart') {
-//                     //         iconName = focused ? 'cart' : 'cart-outline';
-//                     //     }
-
-//                     //     return <MaterialCommunityIcons name={iconName} size={size} color={color} />;
-//                     // },
-//                     headerShown: true,
-//                     tabBarStyle: { backgroundColor: '#0b1520' },
-//                     tabBarActiveTintColor: '#7aa2f7',
-
-//                 })}
-//             >
-//                 <Tab.Screen name="Products" component={ProductListScreen} />
-//                 <Tab.Screen name="Cart" component={CartScreen} />
-//                 <Tab.Screen name="Users" component={UserListScreen} />
-//             </Tab.Navigator>
-//         </NavigationContainer>
-//     );
-// }
