@@ -44,11 +44,11 @@ export default function RootNavigator() {
                 },
             }}
         >
-            <Tab.Navigator screenOptions={{ headerShown: false }}>
+            <Tab.Navigator screenOptions={{ headerShown: true }}>
                 <Tab.Screen name="LargeListScreen" component={LargeListScreen} options={{ title: 'Large List' }} />
                 <Tab.Screen name="Products" component={ProductListScreen} />
                 <Tab.Screen name="Cart" component={CartScreen} />
-                <Tab.Screen name="Users" component={UsersStack} />
+                <Tab.Screen name="Users" component={UsersStack} options={{ headerShown: false }} />
                 <Tab.Screen name="TokenScreen" component={TokenScreen} />
             </Tab.Navigator>
         </NavigationContainer>
