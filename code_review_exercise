@@ -1,0 +1,13 @@
+/* Buggy Version */
+// <FlatList data={data} renderItem={(item) => <Text>{item.title}</Text>}/>
+
+// Fixed version:
+
+// <FlatList
+//   data={data}
+//   keyExtractor={(item,index) => item.id.toString()}
+// assuming each item has `id` or we can continue with index as well
+//   renderItem={({ item }) => (
+//     <Text>{item.title}</Text>
+//   )}
+// />

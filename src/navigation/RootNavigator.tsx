@@ -6,6 +6,7 @@ import CartScreen from '../screens/CartScreen';
 import UserListScreen from '../screens/UserListScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import UserDetailsScreen from '../screens/UserDetailsScreen';
+import TokenScreen from '../screens/TokenScreen';
 // import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export type RootStackParamList = {
@@ -46,6 +47,7 @@ export default function RootNavigator() {
                 <Tab.Screen name="Products" component={ProductListScreen} />
                 <Tab.Screen name="Cart" component={CartScreen} />
                 <Tab.Screen name="Users" component={UsersStack} />
+                <Tab.Screen name="TokenScreen" component={TokenScreen} />
             </Tab.Navigator>
         </NavigationContainer>
     );
