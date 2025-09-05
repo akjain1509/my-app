@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/slices/cartSlice';
-import { FontAwesome5 } from '@expo/vector-icons';
+// import { FontAwesome5 } from '@expo/vector-icons';
 
 
 type Props = {
@@ -14,7 +14,7 @@ export default function ProductRow({ product }: Props) {
 
     return (
         <View style={styles.row}>
-            <FontAwesome5 name="product-hunt" size={24} color="#fff" />
+            {/* <FontAwesome5 name="product-hunt" size={24} color="#fff" /> */}
             <View style={{ flex: 1, paddingLeft: 16 }}>
                 <Text style={styles.title}>{product.title}</Text>
                 <Text style={styles.price}>${product.price}</Text>
