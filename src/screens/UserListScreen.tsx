@@ -22,7 +22,7 @@ export default function UserListScreen() {
 
     if (error) {
         return (
-            <View style={styles.center}>
+            <View style={[styles.center]}>
                 <Text style={{ color: 'white' }}>{error}</Text>
             </View>
         );
@@ -54,7 +54,7 @@ export default function UserListScreen() {
 
 
 const styles = StyleSheet.create({
-    center: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+    center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#0b1520' },
     row: {
         padding: 16,
         borderBottomColor: '#1d2a3b',
