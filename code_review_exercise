@@ -1,7 +1,7 @@
 /* Buggy Version */
 // <FlatList data={data} renderItem={(item) => <Text>{item.title}</Text>}/>
 
-// Fixed version:
+/* Fixed version */
 
 // <FlatList
 //   data={data}
